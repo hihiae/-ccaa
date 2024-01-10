@@ -1288,13 +1288,11 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-ToggleFarm = M:AddToggle({
-    Name = "Auto Farm",
-    Default = false,
-    Flag = "LevelFarm",
-    Save = true,
-    Callback = function(Value)
-        _G.AutoFarm = Value
-        StopTween(_G.AutoFarm)
-    end    
+Tab:AddToggle({
+	Name = "Auto Farm Level",
+	Default = false,
+	Callback = function(Value)
+		_G.AutoFarm = value
+        Stop_Tween(_G.AutoFarm)
+	end    
 })
